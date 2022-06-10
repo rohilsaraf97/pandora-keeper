@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #c7d36f;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  margin: auto;
+  width: 70%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+/* heading */
+
+.heading {
+  text-transform: uppercase;
+  margin: 30px auto;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 800px) {
+  .heading {
+    margin: 10px auto;
+    font-size: 35px;
   }
-  to {
-    transform: rotate(360deg);
+  .todolists {
+    flex-direction: column;
   }
+}
+
+/* input field */
+
+.input {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  position: relative;
+}
+
+.input .input__box {
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding: 20px 30px;
+  width: 100%;
+  border-radius: 50px;
+  transition: 0.2s;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.input .input__box:focus {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.input .input__submit {
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 0;
+  height: 50px;
+  aspect-ratio: 1;
+  margin: 12px;
+  border-radius: 50px;
+  font-size: xx-large;
+  color: #9eb23b;
+  border: 2px solid #9eb23b;
+  box-sizing: border-box;
+  background-color: #fcf9c6;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  transition: all 0.3s;
+}
+
+.input .input__submit:hover {
+  transform: scale(1.1);
+}
+
+/* list item */
+
+.empty-text {
+  font-style: italic;
+  text-align: center;
+  font-size: large;
+  font-weight: 900;
+  color: #ccc;
+}
+
+.todolists {
+  width: 90%;
+  display: flex;
+  margin: 2rem auto;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.todolist {
+  flex-basis: 50%;
+  overflow: scroll;
+  scrollbar-width: 0;
+}
+
+.todolist h3 {
+  color: #fff;
+}
+
+.todolist .active {
+  background-color: #019267;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.todolist .completed {
+  background-color: #4b8673;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.todoitem {
+  cursor: pointer;
+  padding: 10px 30px;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: #ffee63;
+  background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.todoitem:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.todoitem__form {
+  width: 100%;
+}
+
+.todoitem__input {
+  outline: none;
+  border: none;
+  width: 90%;
+  margin: 11px 0;
+  margin-right: 5px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.todoitem__icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todoitem__icon {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.todoitem__icon:hover {
+  transform: scale(1.2);
 }
