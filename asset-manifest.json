@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pandora-keeper/static/css/main.04bfd040.css",
+    "main.js": "/pandora-keeper/static/js/main.7915e55d.js",
+    "static/js/787.03a6315d.chunk.js": "/pandora-keeper/static/js/787.03a6315d.chunk.js",
+    "index.html": "/pandora-keeper/index.html",
+    "main.04bfd040.css.map": "/pandora-keeper/static/css/main.04bfd040.css.map",
+    "main.7915e55d.js.map": "/pandora-keeper/static/js/main.7915e55d.js.map",
+    "787.03a6315d.chunk.js.map": "/pandora-keeper/static/js/787.03a6315d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04bfd040.css",
+    "static/js/main.7915e55d.js"
+  ]
+}
